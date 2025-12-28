@@ -1,0 +1,518 @@
+fileFormatVersion: 2
+guid: a29a979cb6169854b91c1c89823b33eb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5733926905573687632
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_0
+  - first:
+      213: -1127607282851320973
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_1
+  - first:
+      213: -5820665970457063274
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_2
+  - first:
+      213: -1046542139452983927
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_3
+  - first:
+      213: 2113703068353031397
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_4
+  - first:
+      213: 2133561483335659539
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_5
+  - first:
+      213: -4116674868697151904
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_6
+  - first:
+      213: -6956955501825226406
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_7
+  - first:
+      213: 8356514495405081648
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_8
+  - first:
+      213: 6933056101480459510
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_9
+  - first:
+      213: 1722587619419974913
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_10
+  - first:
+      213: -3806420334620656234
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_11
+  - first:
+      213: 31654841226302024
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_12
+  - first:
+      213: -8595860441926686759
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_13
+  - first:
+      213: 7490346386169740913
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_14
+  - first:
+      213: -2006020975046334633
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_15
+  - first:
+      213: -1650611938574222062
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_16
+  - first:
+      213: 3020025879106043911
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_17
+  - first:
+      213: 5644933986214336764
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_18
+  - first:
+      213: 5227276146427655882
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_19
+  - first:
+      213: -9129683137234015757
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_20
+  - first:
+      213: 1236348339082798640
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_21
+  - first:
+      213: 7105265793414095639
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_22
+  - first:
+      213: 8723393313097712567
+    second: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_0
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 232
+        width: 345
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0beb939ebdffc60b0800000000000000
+      internalID: -5733926905573687632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_1
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 232
+        width: 345
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37be08b862fe950f0800000000000000
+      internalID: -1127607282851320973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_2
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 227
+        width: 345
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 690d3ba9327d83fa0800000000000000
+      internalID: -5820665970457063274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_6
+      rect:
+        serializedVersion: 2
+        x: 2145
+        y: 226
+        width: 345
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 066478b9402aed6c0800000000000000
+      internalID: -4116674868697151904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_7
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 0
+        width: 345
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a590283a4dde37f90800000000000000
+      internalID: -6956955501825226406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_8
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 232
+        width: 345
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 034c50ba8ad48f370800000000000000
+      internalID: 8356514495405081648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_9
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 345
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fce8989ac9273060800000000000000
+      internalID: 6933056101480459510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser 1_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 232
+        width: 128
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9778bc35225934aa4d71ca527e52a2
+      internalID: -104243562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser 1_1
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 232
+        width: 134
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da1545d7d4dca224c8bd096ee2185474
+      internalID: 239528822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser 1_2
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 232
+        width: 135
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab563c3492989464c8349e7533f47a5c
+      internalID: 511749828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser 1_3
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 227
+        width: 131
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461e46b4d4ed2a64fb5b8a3b6f451dc6
+      internalID: 172232068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser 1_4
+      rect:
+        serializedVersion: 2
+        x: 2007
+        y: 226
+        width: 138
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063c001a5ff0628459e6ffd55ccb260d
+      internalID: 201413873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser 1_5
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 100
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d374d4896b125e5468a353fa884a1b1d
+      internalID: -2125534679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser 1_6
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 0
+        width: 103
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953c3a16dc3bdde4eb59cbe931946422
+      internalID: 1098506381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 175dfe1598f7f744385130f66e3dcd9a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":345.0,"y":222.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Laser 1_0: -104243562
+      Laser 1_1: 239528822
+      Laser 1_2: 511749828
+      Laser 1_3: 172232068
+      Laser 1_4: 201413873
+      Laser 1_5: -2125534679
+      Laser 1_6: 1098506381
+      anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_0: -5733926905573687632
+      anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_1: -1127607282851320973
+      anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_10: 1722587619419974913
+      anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_11: -3806420334620656234
+      anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_2: -5820665970457063274
+      anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_3: -1046542139452983927
+      anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_4: 2113703068353031397
+      anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_5: 2133561483335659539
+      anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_6: -4116674868697151904
+      anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_7: -6956955501825226406
+      anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_8: 8356514495405081648
+      anime-girl-incredible-throbbing-laser-beam-nui23pk12v4v64w1-ezgif-export_9: 6933056101480459510
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
