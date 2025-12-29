@@ -951,7 +951,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
   buttonObjects:
-  - {fileID: 0}
   - {fileID: 1400584390}
   - {fileID: 593958525}
 --- !u!114 &836493283

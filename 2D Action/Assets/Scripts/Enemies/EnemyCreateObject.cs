@@ -1,6 +1,4 @@
 using System.Collections;
-using TMPro;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class EnemyCreateObject : MonoBehaviour 

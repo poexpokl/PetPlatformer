@@ -3134,7 +3134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7398342843515459559, guid: 1068a8686c6589b4d8134f852799e33c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.5
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 7398342843515459559, guid: 1068a8686c6589b4d8134f852799e33c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7195,7 +7195,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1622380344684260253, guid: e75d2a8485b87764a8ddfb975fc20ef7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.690375
+      value: -13.5758705
       objectReference: {fileID: 0}
     - target: {fileID: 1622380344684260253, guid: e75d2a8485b87764a8ddfb975fc20ef7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7203,7 +7203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1622380344684260253, guid: e75d2a8485b87764a8ddfb975fc20ef7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.5
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 1622380344684260253, guid: e75d2a8485b87764a8ddfb975fc20ef7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15336,7 +15336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633203542285048815, guid: 232689d98cd829b40b481d9a355897ca, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5633203542285048815, guid: 232689d98cd829b40b481d9a355897ca, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15488,17 +15488,9 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8711921452319468022, guid: 2501f037a0b447b4dae7125930f48420, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -31.432434
-      objectReference: {fileID: 0}
     - target: {fileID: 9089036955984803433, guid: 2501f037a0b447b4dae7125930f48420, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 9206458145473745579, guid: 2501f037a0b447b4dae7125930f48420, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 169
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
