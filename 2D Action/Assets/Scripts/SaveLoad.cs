@@ -89,7 +89,7 @@ public class SaveLoad : MonoBehaviour
     private void OnSceneReloaded(Scene scene, LoadSceneMode mode)
     {
         SceneManager.sceneLoaded -= OnSceneReloaded;
-        G.playerController.Reload(playerPosition, mana, flipX);
+        G.player.GetComponent<PlayerReloading>().Reload(playerPosition, mana, flipX);
     }
 
     public void DeleteSave()

@@ -744,6 +744,10 @@ GameObject:
   - component: {fileID: 2514366827760383444}
   - component: {fileID: 6331303970870279969}
   - component: {fileID: 3879851181980947404}
+  - component: {fileID: 5263650141561523573}
+  - component: {fileID: 6605898788420313102}
+  - component: {fileID: 8733170953400193216}
+  - component: {fileID: 419847942144581726}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -877,14 +881,6 @@ MonoBehaviour:
   getDamageForce: {x: 95, y: 50}
   manaLoseTime: 0.33
   deadTime: 2
-  attackAudio:
-  - {fileID: 8300000, guid: 4e9803223ceb03e44a59f8bda261bde3, type: 3}
-  - {fileID: 8300000, guid: b73d332ec14c41248af8badf859ee5fd, type: 3}
-  runAudio: {fileID: 8300000, guid: 6d8ca17199d3c7c48afebe23016815a8, type: 3}
-  dashAudio: {fileID: 8300000, guid: 75bc3432ed090204182aa8a8dcbc03ce, type: 3}
-  healAudio: {fileID: 8300000, guid: ec88d1876e79acc4087132e3dae9798f, type: 3}
-  getDamageAudio: {fileID: 8300000, guid: 4c39809c069f8c043a05c71815ce7496, type: 3}
-  deathAudio: {fileID: 8300000, guid: 3c3ca152273be3c4f9d42ddb280ba654, type: 3}
 --- !u!50 &6312064670960287102
 Rigidbody2D:
   serializedVersion: 5
@@ -1134,6 +1130,62 @@ MonoBehaviour:
     m_Bits: 2112
   boxCastDistance: 0
   boxCastSize: {x: 0.8, y: 0.1}
+--- !u!114 &5263650141561523573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3710699842202424343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218f82fca93cefa438fcf0e2669c1aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAudio
+  attackAudio:
+  - {fileID: 8300000, guid: 4e9803223ceb03e44a59f8bda261bde3, type: 3}
+  - {fileID: 8300000, guid: b73d332ec14c41248af8badf859ee5fd, type: 3}
+  runAudio: {fileID: 8300000, guid: 6d8ca17199d3c7c48afebe23016815a8, type: 3}
+  dashAudio: {fileID: 8300000, guid: 75bc3432ed090204182aa8a8dcbc03ce, type: 3}
+  healAudio: {fileID: 8300000, guid: ec88d1876e79acc4087132e3dae9798f, type: 3}
+  getDamageAudio: {fileID: 8300000, guid: 4c39809c069f8c043a05c71815ce7496, type: 3}
+  deathAudio: {fileID: 8300000, guid: 3c3ca152273be3c4f9d42ddb280ba654, type: 3}
+--- !u!114 &6605898788420313102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3710699842202424343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a5902eeb5493f4e975191e40021ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerReloading
+--- !u!114 &8733170953400193216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3710699842202424343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b02b4afe043980d4bbd2f451703320db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
+--- !u!114 &419847942144581726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3710699842202424343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea667934ef7384f458d67c6f78bc80eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerUpdateCollider
 --- !u!1 &3950488879396116997
 GameObject:
   m_ObjectHideFlags: 0
