@@ -7,7 +7,7 @@ public class OpenPauseMenu : MonoBehaviour
     private InputAction pause; 
     void Awake()
     {
-        menu.SetActive(true); //костыль
+        menu.SetActive(true);
         menu.SetActive(false);
         pause = InputSystem.actions.FindAction("Pause");
         pause.Enable();
@@ -25,10 +25,10 @@ public class OpenPauseMenu : MonoBehaviour
 
     private void Open(InputAction.CallbackContext context)
     {
-        GetComponent<AudioSource>().Stop(); //??????????????
+        GetComponent<AudioSource>().Stop();
         PauseManager.Pause();
-        menu.SetActive(true); //ћб в синглтон переделать или как-нибудь...
+        menu.SetActive(true);
         menu.GetComponent<PauseMenu>().WasPlayerMapEnable = InputSystem.actions.FindAction("Move").enabled;
-        InputSystem.actions.FindActionMap("Player").Disable(); // не соответствует названию
+        InputSystem.actions.FindActionMap("Player").Disable();
     }
 }

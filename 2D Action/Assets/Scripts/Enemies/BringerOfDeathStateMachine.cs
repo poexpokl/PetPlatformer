@@ -20,7 +20,7 @@ public class BringerOfDeathStateMachine : EnemyStateMachine
     {
         if(isDied)
             ChangeState(EnemyState.Dead);
-        else if (checks.isPlayerActivateRectangle() && !attack.isCooldown) //Rectangle?
+        else if (checks.isPlayerActivateRectangle() && !attack.isCooldown)
             ChangeState(EnemyState.Attack);
         else if (!attack.isAttacking && state != EnemyState.Stay)
             ChangeState(EnemyState.Stay);

@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using static DisposableSaveLoader;
 
-public class DisposableSaveLoader : MonoBehaviour //Название (тут не только SaveLoad)
+public class DisposableSaveLoader : MonoBehaviour
 {
     
     [System.Serializable]
@@ -19,7 +18,6 @@ public class DisposableSaveLoader : MonoBehaviour //Название (тут не только Save
         if (Instance == null)
         {
             Instance = this;
-            //DontDestroyOnLoad(gameObject);
         }
         else
         {

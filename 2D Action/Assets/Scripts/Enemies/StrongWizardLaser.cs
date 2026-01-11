@@ -8,7 +8,6 @@ public class StrongWizardLaser : MonoBehaviour
     {
         StartCoroutine(DestroyLaser());
     }
-    //сделать анимацию при попадании
     private IEnumerator DestroyLaser()
     {
         yield return new WaitForSeconds(activeTime);

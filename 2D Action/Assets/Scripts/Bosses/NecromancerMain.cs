@@ -77,7 +77,7 @@ public class NecromancerMain : MonoBehaviour
         {
             if (absoluteLaserCount == 0)
                 attacks.ChangeLasersAnimationSpeed(AbsoluteAttackSpeed);
-            if (currentPositionPoint != 3) //?
+            if (currentPositionPoint != 3)
                 Move();
             else if(absoluteLaserCount < absoluteLaserMaxCount / 2)
             {
@@ -101,7 +101,6 @@ public class NecromancerMain : MonoBehaviour
     }
     private void Move()
     {
-        //Возможно добавить задержку перед этим
         if(phase == 1)
         {
             randomNumber = Random.Range(0, 2);
@@ -142,7 +141,7 @@ public class NecromancerMain : MonoBehaviour
         }
         else
         {
-            if(currentPositionPoint != 3) //?
+            if(currentPositionPoint != 3)
             {
                 currentPositionPoint = 3;
                 movement.MoveToPoint(currentPositionPoint);

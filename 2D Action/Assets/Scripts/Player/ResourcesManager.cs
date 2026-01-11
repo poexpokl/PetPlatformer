@@ -3,7 +3,6 @@ using UnityEngine;
 public class ResourcesManager : MonoBehaviour
 {
     public int hp { get; private set; } = 5;
-    //public int damage { get; } = 5; //Переименовать класс в StatsManager
     private int maxHp = 5;
     public int mana { get; private set; } = 0;
     private int maxMana = 9;
@@ -24,12 +23,12 @@ public class ResourcesManager : MonoBehaviour
         manaManager.UpdateMana(mana);
     }
 
-    public bool CanUseMana(int usedMana)//нейминг?
+    public bool CanUseMana(int usedMana)
     {
         return mana >= usedMana;
     }
 
-    public void ChangeHp() //удалить
+    public void ChangeHp()
     {
         hp -= 1;
         if (hp > maxHp)
@@ -39,7 +38,7 @@ public class ResourcesManager : MonoBehaviour
         hearthsManager.UpdateHearts(hp);
     }
 
-    public void ChangeMana() //удалить
+    public void ChangeMana()
     {
         mana += 1;
         if (mana > maxMana)

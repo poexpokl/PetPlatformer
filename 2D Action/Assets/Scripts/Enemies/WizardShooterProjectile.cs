@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WizardShooterProjectile : MonoBehaviour
 {
-    [SerializeField] private LayerMask destroyLayers; //LayerMask не нужно быть []
+    [SerializeField] private LayerMask destroyLayers;
     [SerializeField] float expodingTime;
     [SerializeField] float speed;
     Rigidbody2D rb;
@@ -19,7 +19,6 @@ public class WizardShooterProjectile : MonoBehaviour
         rb.linearVelocity = new Vector2 (xRatio, yRatio) * speed;
         GetComponent<DestroyAtfter>().DestroyObject();
     }
-    //сделать анимацию при попадании
     private IEnumerator DestroyProjectile()
     {
         rb.linearVelocity = Vector2.zero;

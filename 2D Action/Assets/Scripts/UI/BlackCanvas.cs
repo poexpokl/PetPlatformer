@@ -20,5 +20,4 @@ public class BlackCanvas : MonoBehaviour
         InputSystem.actions.FindActionMap("Player").Enable();
         Destroy(gameObject);
     }
-
 }

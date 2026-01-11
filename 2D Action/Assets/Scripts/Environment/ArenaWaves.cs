@@ -20,7 +20,7 @@ public class ArenaWaves : MonoBehaviour
         enemyCounts = enemyFactory.EnemiesCounts[0];
         enemyFactory.CreateEnemies();
     }
-    private void NextWave() //?
+    private void NextWave()
     {
         if(enemyFactory.EnemiesCounts.Count > 0)
         {

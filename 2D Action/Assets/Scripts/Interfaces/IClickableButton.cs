@@ -1,8 +1,7 @@
-using UnityEngine;
 using UnityEngine.EventSystems;
 
-public interface IClickableButton : IPointerEnterHandler, IPointerExitHandler //Не нужен?
+public interface IClickableButton : IPointerEnterHandler, IPointerExitHandler
 {
     public void ShowClickable();
-    public void ShowUnclickable(); //?
+    public void ShowUnclickable();
 }

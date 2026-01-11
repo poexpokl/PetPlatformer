@@ -1,11 +1,10 @@
-using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PauseMenu : Menu
 {
-    private InputAction exitAction; //button
+    private InputAction exitAction;
 
-    public bool WasPlayerMapEnable; //{ private get; set; } //?
+    public bool WasPlayerMapEnable;
 
     protected override void Awake()
     {
@@ -26,7 +25,7 @@ public class PauseMenu : Menu
     }
     private void PressExit(InputAction.CallbackContext context)
     {
-        buttonObjects[0].GetComponent<MenuButton>().ExecuteClick(); //?
+        buttonObjects[0].GetComponent<MenuButton>().ExecuteClick();
     }
     public void CloseMenu()
     {

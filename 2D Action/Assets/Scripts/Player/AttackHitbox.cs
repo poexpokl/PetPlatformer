@@ -11,9 +11,8 @@ public enum PlayerTriggerType
 
 public class AttackHitbox : MonoBehaviour
 {
-    //[SerializeField] private int damage = 10;
     [SerializeField] private LayerMask environmentLayer;
-    [SerializeField] private string[] enemyTags = { "Enemy"}; //"Boss" 
+    [SerializeField] private string[] enemyTags = { "Enemy"};
     [SerializeField] private float damage;
     [SerializeField] PlayerTriggerType triggerType;
     private PlayerController playerController;
@@ -30,8 +29,6 @@ public class AttackHitbox : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-
-        // Проверка по слою ИЛИ по тегу
         if (IsValidTarget(other.gameObject) && !alreadyHit.Contains(other.gameObject))
         {
             alreadyHit.Add(other.gameObject);
@@ -43,9 +40,9 @@ public class AttackHitbox : MonoBehaviour
                 audioSource.Play();
             }
         }
-        else if (((1 << other.gameObject.layer) & environmentLayer) != 0) // ????
+        else if (((1 << other.gameObject.layer) & environmentLayer) != 0)
         {
-            playerController.EnvironmentAttacked(triggerType); //
+            playerController.EnvironmentAttacked(triggerType);
             audioSource.clip = spikeHitAudio;
             audioSource.Play();
         }
@@ -58,11 +55,6 @@ public class AttackHitbox : MonoBehaviour
     }
     private bool IsValidTarget(GameObject target)
     {
-        // Проверка по слою
-        //if (((1 << target.layer) & enemyLayer) != 0)
-        //    return true;
-
-        // Проверка по тегу
         foreach (string tag in enemyTags)
         {
             if (target.CompareTag(tag))

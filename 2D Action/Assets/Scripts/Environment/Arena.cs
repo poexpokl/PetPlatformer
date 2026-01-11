@@ -2,7 +2,7 @@ using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 
-public class Arena : MonoBehaviour //Название?
+public class Arena : MonoBehaviour
 {
     [SerializeField] private ArenaEnter arenaEnter;
     [SerializeField] private ArenaWaves arenaWaves;
@@ -44,7 +44,7 @@ public class Arena : MonoBehaviour //Название?
     }
     private void EndArena()
     {
-        foreach (GameObject objectToActivate in ObjectsToActivate) //Activate?
+        foreach (GameObject objectToActivate in ObjectsToActivate)
         {
             objectToActivate.SetActive(false);
         }

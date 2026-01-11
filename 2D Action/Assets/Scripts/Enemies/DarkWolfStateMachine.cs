@@ -3,7 +3,7 @@ using UnityEngine;
 public class DarkWolfStateMachine : EnemyStateMachine, IEdgeble
 {
     private EnemyMovement movement;
-    [SerializeField] private Vector2 reAttackVector; //название
+    [SerializeField] private Vector2 reAttackVector;
     [SerializeField] private float speedOnAttack;
     private EnemyChecks checks;
 
@@ -97,14 +97,14 @@ public class DarkWolfStateMachine : EnemyStateMachine, IEdgeble
                 movement.SetZeroSpeed();
                 eAnimation.DeadAnimation();
                 GetComponentInChildren<EnemyTrigger>().gameObject.SetActive(false);
-                gameObject.tag = "Untagged"; //
+                gameObject.tag = "Untagged";
                 GetComponent<DestroyAtfter>().DestroyObject();
                 enabled = false;
                 break;
         }
     }
 
-    public void OnEdge(int edgeOrientation) //как обязать поставить триггеры? Переименовать т.к. вызывается и при упоре в стену
+    public void OnEdge(int edgeOrientation)
     {
         if (state == EnemyState.Wander)
             orientation.ChangeOrientation(edgeOrientation);

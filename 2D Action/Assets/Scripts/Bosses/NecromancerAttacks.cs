@@ -20,14 +20,14 @@ public class NecromancerAttacks : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         lasers[0].SetActive(true);
-        laserEnableTime = lasers[0].GetComponent<NecromancerLaser>().AnimationTime / laserEnableTimeDivider; // /? 
+        laserEnableTime = lasers[0].GetComponent<NecromancerLaser>().AnimationTime / laserEnableTimeDivider;
         lasers[0].SetActive(false);
         lasers[8].SetActive(true);
         scullAttackTime = lasers[8].GetComponent<NecromancerLaser>().AnimationTime;
         lasers[8].SetActive(false);
     }
 
-    private void ActivateLaser(int laserNumber) //lasers è numbers[]
+    private void ActivateLaser(int laserNumber)
     {
         lasers[laserNumber].SetActive(true);
     }

@@ -33,7 +33,6 @@ public class SaveLoad : MonoBehaviour
         saveData.sceneIndex = SceneManager.GetActiveScene().buildIndex;
         saveData.playerPosition = G.playerTransform.position;
         File.WriteAllText(Path.Combine(Application.persistentDataPath, pathToFile), JsonUtility.ToJson(saveData));
-        //Debug.Log($"Save\nsaveData.sceneIndex: {saveData.sceneIndex}, saveData.playerPosition: {saveData.playerPosition}");
     }
 
     public void Load()
@@ -41,7 +40,6 @@ public class SaveLoad : MonoBehaviour
         if (CheckSaveFileExists())
         {
             saveData = JsonUtility.FromJson<SaveData>(File.ReadAllText(Path.Combine(Application.persistentDataPath, pathToFile)));
-            //Debug.Log($"saveData.sceneIndex: {saveData.sceneIndex}, saveData.playerPosition: {saveData.playerPosition}");
             SceneManager.sceneLoaded += OnSceneLoaded;
             SceneManager.LoadScene(saveData.sceneIndex);
         }
@@ -71,8 +69,8 @@ public class SaveLoad : MonoBehaviour
     private void OnSceneOverloadingLoaded(Scene scene, LoadSceneMode mode)
     {
         SceneManager.sceneLoaded -= OnSceneOverloadingLoaded;
-        G.playerTransform.position = playerPosition; //решить какой способ выбрать. Этот (с контролем здесь) или другой
-        G.player.GetComponent<ResourcesManager>().ChangeHp(hp - 5); //5?
+        G.playerTransform.position = playerPosition;
+        G.player.GetComponent<ResourcesManager>().ChangeHp(hp - 5);
         G.player.GetComponent<ResourcesManager>().ChangeMana(mana);
         G.player.GetComponent<SpriteRenderer>().flipX = flipX;
     }

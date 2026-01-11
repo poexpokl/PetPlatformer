@@ -1,7 +1,7 @@
 using Unity.Mathematics;
 using UnityEngine;
 
-public class EnemyChecks : MonoBehaviour //?
+public class EnemyChecks : MonoBehaviour
 {
     private Transform playerTransform;
     private EnemyOrientation orientation;
@@ -9,7 +9,7 @@ public class EnemyChecks : MonoBehaviour //?
     [SerializeField] private float nearMagnitude;
     [SerializeField] private float nearX;
     [SerializeField] private float nearY;
-    [SerializeField] private float activateMagnitude; //?
+    [SerializeField] private float activateMagnitude;
     [SerializeField] private float activateX;
     [SerializeField] private float activateY;
 
@@ -18,7 +18,7 @@ public class EnemyChecks : MonoBehaviour //?
         playerTransform = G.playerTransform;
         orientation = GetComponent<EnemyOrientation>();
     }
-    public bool CanSeePlayer() //переименовать
+    public bool CanSeePlayer()
     {
         Vector2 playerVector = playerTransform.position - transform.position;
         Vector2 direction = playerVector.normalized;
@@ -28,29 +28,29 @@ public class EnemyChecks : MonoBehaviour //?
 
         return hit.collider == null;
     }
-    public bool isPlayerNearCircle() //название??
+    public bool isPlayerNearCircle()
     {
         return (playerTransform.position - transform.position).magnitude < nearMagnitude;
     }
 
-    public bool isPlayerNearRectangle() //название??
+    public bool isPlayerNearRectangle()
     {
         return (math.abs(transform.position.x - playerTransform.position.x) < nearX &&
             math.abs(transform.position.y - playerTransform.position.y) < nearY);
     }
 
-    public bool isPlayerNearRectangle(float newX, float newY) //название??
+    public bool isPlayerNearRectangle(float newX, float newY)
     {
         return (math.abs(transform.position.x - playerTransform.position.x) < newX &&
             math.abs(transform.position.y - playerTransform.position.y) < newY);
     }
 
-    public bool isPlayerActivateCircle() //ТОЧНО НАЗВАНИЕ!
+    public bool isPlayerActivateCircle()
     {
         return (playerTransform.position - transform.position).magnitude < activateMagnitude;
     }
 
-    public bool isPlayerActivateRectangle() //название??
+    public bool isPlayerActivateRectangle()
     {
         return (math.abs(transform.position.x - playerTransform.position.x) < activateX &&
             math.abs(transform.position.y - playerTransform.position.y) < activateY);

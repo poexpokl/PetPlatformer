@@ -14,7 +14,7 @@ public class BringerOfDeathProjectile : MonoBehaviour
 
     private void Update()
     {
-        float addend = Time.deltaTime * addendRatio; //помен€ть слагаемое, ввести startTime и endTime, помен€ть анимацию
+        float addend = Time.deltaTime * addendRatio;
         boxCollider.size = new Vector2(boxCollider.size.x, boxCollider.size.y + addend); 
         boxCollider.offset = new Vector2(boxCollider.offset.x, boxCollider.offset.y + addend / 2);
     }
@@ -27,7 +27,6 @@ public class BringerOfDeathProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if(collision != null)
         if (collision.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerController>().GetDamage((Vector2)transform.position);

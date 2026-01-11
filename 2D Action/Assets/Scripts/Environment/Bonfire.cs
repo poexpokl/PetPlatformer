@@ -11,13 +11,8 @@ public class Bonfire : MonoBehaviour, IInteractable
     public void DoInteraction()
     {
         SaveLoad.Instance.Save();
-        //playerInput.enabled = false;
-        // или
-        //playerInput.DeactivateInput();
-        //playerInput.SwitchCurrentActionMap()
         InputSystem.actions.FindActionMap("Player").Disable();
         InputSystem.actions.FindAction("Pause").Enable();
-        //G.player.GetComponent<PlayerController>().enabled = false;
         StartCoroutine(Loading());
     }
 
@@ -30,7 +25,6 @@ public class Bonfire : MonoBehaviour, IInteractable
         int mana = G.player.GetComponent<ResourcesManager>().mana;
         bool flipX = G.player.GetComponent<SpriteRenderer>().flipX;
         InputSystem.actions.FindActionMap("Player").Enable();
-        //G.player.GetComponent<PlayerController>().enabled = true;
         SaveLoad.Instance.Reload(playerPosition, mana, flipX);
     }
 

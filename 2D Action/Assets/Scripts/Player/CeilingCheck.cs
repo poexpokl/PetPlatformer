@@ -7,7 +7,7 @@ public class CeilingCheck : MonoBehaviour
     private BoxCollider2D boxCollider;
     private Bounds bounds;
     [SerializeField] private float boxCastDistance;
-    [SerializeField] private Vector2 boxCastSize = new Vector2(0.2f, 0.1f); // Ўирина и высота области проверки
+    [SerializeField] private Vector2 boxCastSize = new Vector2(0.2f, 0.1f);
 
     private void Start()
     {

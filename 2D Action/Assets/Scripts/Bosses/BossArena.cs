@@ -12,10 +12,9 @@ public class BossArena : MonoBehaviour
 
     private void OnEnable()
     {
-        boss.SetActive(true); //????????
-        boss.GetComponent<NecromancerHPManager>().Died += BossDied; //добавить интерфейс для события
+        boss.SetActive(true); 
+        boss.GetComponent<NecromancerHPManager>().Died += BossDied; 
         boss.SetActive(false);
-        //а ещё босс выключен. Как я с него компонент возьму?
     }
 
     private void OnDisable()

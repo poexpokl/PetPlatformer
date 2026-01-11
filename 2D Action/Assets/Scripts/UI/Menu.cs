@@ -6,7 +6,7 @@ public abstract class Menu : MonoBehaviour
 {
     [SerializeField] protected List<GameObject> buttonObjects;
     protected int currentButton;
-    protected InputAction navigateAction; //1 или 2d axis
+    protected InputAction navigateAction;
     protected InputAction pressAction;
     protected virtual void Awake()
     {
@@ -16,7 +16,7 @@ public abstract class Menu : MonoBehaviour
     protected virtual void OnEnable()
     {
         InputSystem.actions.FindActionMap("UI").Enable();
-        navigateAction.started += PressNavigate; //поменять
+        navigateAction.started += PressNavigate;
         pressAction.started += PressClick;
 
         currentButton = 0;
@@ -34,13 +34,13 @@ public abstract class Menu : MonoBehaviour
     protected void PressNavigate(InputAction.CallbackContext context)
     {
         int leafInput = (int)context.ReadValue<float>();
-        int previousButton = currentButton; //number?
+        int previousButton = currentButton;
         currentButton += leafInput;
         if(currentButton < 0)
             currentButton = buttonObjects.Count - 1;
         if(currentButton > buttonObjects.Count - 1)
             currentButton = 0;
-        buttonObjects[previousButton].GetComponent<MenuButton>().ShowUnclickable(); //?
+        buttonObjects[previousButton].GetComponent<MenuButton>().ShowUnclickable();
         buttonObjects[currentButton].GetComponent<MenuButton>().ShowClickable();  
     }
     protected void PressClick(InputAction.CallbackContext context)
@@ -48,13 +48,11 @@ public abstract class Menu : MonoBehaviour
         buttonObjects[currentButton].GetComponent<MenuButton>().ExecuteClick();
     }
 
-    public void ChangeCurrentButtonFromMouse(GameObject button) //?
+    public void ChangeCurrentButtonFromMouse(GameObject button)
     {
         int previousButton = currentButton;
         currentButton = buttonObjects.IndexOf(button);
         buttonObjects[previousButton].GetComponent<MenuButton>().ShowUnclickable();
         buttonObjects[currentButton].GetComponent<MenuButton>().ShowClickable();
     }
-
-
 }

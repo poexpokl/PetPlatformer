@@ -40,16 +40,10 @@ public class EnemyCreateObject : MonoBehaviour
     }
     IEnumerator CreatingFlippedObject()
     {
-        //isAttacking = true;
-        //isCooldown = true;
         yield return new WaitForSeconds(createTime);
         Vector3 newObjectOffset = new Vector3(-objectOffset.x * orientation.orientation, objectOffset.y, objectOffset.z);
         GameObject newObject = Instantiate(createdObject, transform.position + newObjectOffset, Quaternion.identity);
         newObject.GetComponent<SpriteRenderer>().flipX = true;
-        //yield return new WaitForSeconds(attackTime - createTime);
-        //isAttacking = false; //есть ли случаи, когда это не подходит???
-        //yield return new WaitForSeconds(cooldownTime - attackTime);
-        //isCooldown = false;
     }
     public void CreateObject(int orientation)
     {
@@ -75,19 +69,13 @@ public class EnemyCreateObject : MonoBehaviour
     }
     IEnumerator CreatingFlippedObject(int orientation)
     {
-        //isAttacking = true;
-        //isCooldown = true;
         yield return new WaitForSeconds(createTime);
         Vector3 newObjectOffset = new Vector3(-objectOffset.x * orientation, objectOffset.y, objectOffset.z);
         GameObject newObject = Instantiate(createdObject, transform.position + newObjectOffset, Quaternion.identity);
         newObject.GetComponent<SpriteRenderer>().flipX = true;
-        //yield return new WaitForSeconds(attackTime - createTime);
-        //isAttacking = false; //есть ли случаи, когда это не подходит???
-        //yield return new WaitForSeconds(cooldownTime - attackTime);
-        //isCooldown = false;
     }
 
-    public void CreateObject(Transform targetTransform, int multiplier) //из точки //таргет“рансформ???????
+    public void CreateObject(Transform targetTransform, int multiplier)
     {
         StartCoroutine(CreatingObject(targetTransform, multiplier));
     }
@@ -105,7 +93,7 @@ public class EnemyCreateObject : MonoBehaviour
         isCooldown = false;
     }
 
-    public void CreateObject(Transform targerTransform) //из шутера под углом
+    public void CreateObject(Transform targerTransform)
     {
         StartCoroutine(CreatingObject(targerTransform));
     }
@@ -124,11 +112,6 @@ public class EnemyCreateObject : MonoBehaviour
         yield return new WaitForSeconds(cooldownTime - attackTime);
         isCooldown = false;
     }
-    /*public float CalculateAngle(Vector3 targetPosition)
-    {
-        Vector2 projectileDirection = (targetPosition - transform.position).normalized;
-        return Mathf.Atan2(projectileDirection.y, projectileDirection.x) * Mathf.Rad2Deg;
-    }*/
     public void StopCoroutines()
     {
         StopAllCoroutines();

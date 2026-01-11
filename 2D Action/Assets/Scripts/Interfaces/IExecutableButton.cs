@@ -1,7 +1,4 @@
-using UnityEngine;
-
-public interface IExecutableButon //Не нужен?
+public interface IExecutableButon
 {
     public void ExecuteClick();
-
 }

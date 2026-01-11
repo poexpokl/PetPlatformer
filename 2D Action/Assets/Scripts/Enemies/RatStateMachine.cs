@@ -1,6 +1,4 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem.LowLevel;
 
 public class RatStateMachine : EnemyStateMachine, IEdgeble
 {

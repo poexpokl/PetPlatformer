@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem.LowLevel;
 
 public enum EnemyState
 {
@@ -10,7 +9,6 @@ public enum EnemyState
     Dead,
     Teleport,
     GotDamage
-    //и проч.
 };
 
 public abstract class EnemyStateMachine : MonoBehaviour

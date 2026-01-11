@@ -9,11 +9,9 @@ public class StrongWizardLaserEnd : MonoBehaviour
     private float distance = 35f;
     private float currentDistance;
     private float startSize = 12.299f - 8.847f;
-    //private float scaleScalingSpeed;
-    //private float currentTime;
     private void Start()
     {
-        StartCoroutine(SetLocalScale()); //изменить название
+        StartCoroutine(SetLocalScale());
         StartCoroutine(DestroyLaser());
     }
     private IEnumerator DestroyLaser()
@@ -22,7 +20,7 @@ public class StrongWizardLaserEnd : MonoBehaviour
 
         Destroy(gameObject);
     }
-    private IEnumerator SetLocalScale() //название?
+    private IEnumerator SetLocalScale()
     {
         yield return new WaitForEndOfFrame();
 
@@ -38,13 +36,6 @@ public class StrongWizardLaserEnd : MonoBehaviour
             currentDistance = hit.distance;
         else
             currentDistance = distance;
-        //scaleScalingSpeed = currentDistance / startSize / activeTime;
         transform.localScale = new Vector3(currentDistance / startSize, transform.localScale.y, transform.localScale.z);
     }
-
-    /*private void Update()
-    {
-        transform.localScale = new Vector3(scaleScalingSpeed * currentTime, transform.localScale.y, transform.localScale.z);
-        currentTime += Time.deltaTime;
-    }*/
 }

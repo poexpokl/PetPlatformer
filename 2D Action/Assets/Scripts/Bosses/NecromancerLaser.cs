@@ -26,7 +26,6 @@ public class NecromancerLaser : MonoBehaviour
     {
         yield return new WaitForSeconds(activateTime);
         boxCollider.enabled = true;
-        //здесь же будет звук
         yield return new WaitForSeconds(AnimationTime - activateTime);
         gameObject.SetActive(false);
     }

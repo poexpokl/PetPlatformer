@@ -17,16 +17,16 @@ public class PlayerUpdateCollider : MonoBehaviour
     }
     private void LateUpdate()
     {
-        if (PlayerController.currentState == PlayerState.Heal) //
+        if (PlayerController.currentState == PlayerState.Heal)
         {
             float oldHeight = boxCollider.bounds.size.y;
-            float newHeight = spriteRenderer.bounds.size.y; // Оно правильно работает?
-            boxCollider.size = spriteRenderer.sprite.bounds.size; //может возникнуть рассинхрон при localScale x != y, тогда можно менять только y
-            transform.position = new Vector2(transform.position.x, transform.position.y - (oldHeight - newHeight) / 2); //меняю transform?
+            float newHeight = spriteRenderer.bounds.size.y;
+            boxCollider.size = spriteRenderer.sprite.bounds.size;
+            transform.position = new Vector2(transform.position.x, transform.position.y - (oldHeight - newHeight) / 2);
         }
         else
         {
-            if(boxCollider.size != generalColliderSize)//?
+            if(boxCollider.size != generalColliderSize)
                 boxCollider.size = generalColliderSize;
         }
     }

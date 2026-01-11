@@ -16,7 +16,6 @@ public class FlyingDemonProjectile : MonoBehaviour
         rb.linearVelocity = new Vector2(xRatio, yRatio) * speed;
         GetComponent<DestroyAtfter>().DestroyObject();
     }
-    //сделать анимацию при попадании
     private IEnumerator DestroyProjectile()
     {
         rb.linearVelocity = Vector2.zero;

@@ -40,7 +40,7 @@ public class PlayerAnimation : MonoBehaviour
                 animator.SetBool("IsHealing", true);
             else if (playerController.currentState == PlayerState.GetDamage)
                 animator.SetBool("IsGettingDamage", true);
-            else if (playerController.currentState == PlayerState.Interact) // ...........
+            else if (playerController.currentState == PlayerState.Interact)
                 animator.SetBool("IsHealing", true);
 
             if (playerController.isStateRepeat)

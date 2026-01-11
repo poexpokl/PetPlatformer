@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Audio;
 using static PlayerController;
 
 public class PlayerAudio : MonoBehaviour
@@ -31,9 +30,9 @@ public class PlayerAudio : MonoBehaviour
                 audioSource.loop = false;
                 audioSource.Stop();
 
-                if (playerController.currentState == PlayerState.Dash) //switch case?
+                if (playerController.currentState == PlayerState.Dash)
                 {
-                    audioSource.clip = dashAudio; //мб тут контролировать громкость или перезаписать аудиофайлы
+                    audioSource.clip = dashAudio;
                     audioSource.Play();
                 }
                 else if (playerController.currentState == PlayerState.Run)
@@ -48,12 +47,6 @@ public class PlayerAudio : MonoBehaviour
                     audioSource.clip = getDamageAudio;
                     audioSource.Play();
                 }
-                /*
-                else if(currentState == PlayerState.Jump) 
-                {
-                    audioSource.clip = jumpAudio;
-                    audioSource.Play();
-                }*/
                 else if (playerController.currentState == PlayerState.Heal)
                 {
                     audioSource.clip = healAudio;
@@ -65,9 +58,7 @@ public class PlayerAudio : MonoBehaviour
                 {
                     audioSource.clip = attackAudio[1];
                     audioSource.Play();
-                    //attackIndex++;
                 }
-                //получение урона
             }
         }
         else if (!dieSoundPlayed)

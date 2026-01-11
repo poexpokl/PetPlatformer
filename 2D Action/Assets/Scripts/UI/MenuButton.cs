@@ -2,14 +2,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public abstract class MenuButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler//, IPointerExitHandler
-//IClickableButton, IExecutableButon
+public abstract class MenuButton : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
 {
     private TMP_Text textComponent;
     private Color startColor;
     private void Awake()
     {
-        if(textComponent == null) //?
+        if(textComponent == null)
         {
             textComponent = GetComponent<TMP_Text>();
             startColor = textComponent.color;
@@ -21,7 +20,7 @@ public abstract class MenuButton : MonoBehaviour, IPointerClickHandler, IPointer
     {
         if(textComponent == null)
         {
-            textComponent = GetComponent<TMP_Text>();//?
+            textComponent = GetComponent<TMP_Text>();
             startColor = textComponent.color;
         }
 

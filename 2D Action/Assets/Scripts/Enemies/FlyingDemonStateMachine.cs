@@ -49,8 +49,6 @@ public class FlyingDemonStateMachine : EnemyStateMachine
                 eAnimation.TeleportAnimation(true);
                 StartCoroutine(Teleporting());
                 break;
-            //case EnemyState.Stay:
-            //    break;
             case EnemyState.Dead:
                 eAnimation.DeadAnimation();
                 attack.StopCoroutines();

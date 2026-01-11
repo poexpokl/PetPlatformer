@@ -9,7 +9,7 @@ public class EdgeTrigger : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         edgeble = edgebleScript as IEdgeble;
-        if (collision.gameObject.layer == 6 || collision.gameObject.layer == 11) //ground || wall
+        if (collision.gameObject.layer == 6 || collision.gameObject.layer == 11)
         {
             edgeble.OnEdge(orientation);
         }

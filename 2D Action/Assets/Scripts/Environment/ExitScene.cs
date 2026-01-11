@@ -1,10 +1,9 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ExitScene : MonoBehaviour
 {
     [SerializeField] int nextSceneNumber;
-    [SerializeField] Vector3 newPosition; //куда это?
+    [SerializeField] Vector3 newPosition;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
@@ -14,7 +13,6 @@ public class ExitScene : MonoBehaviour
             collision.gameObject.GetComponent<ResourcesManager>().GetResources(out hp,out mana);
             bool flipX = collision.gameObject.GetComponent<SpriteRenderer>().flipX;
             SaveLoad.Instance.Load(newPosition, hp, mana, nextSceneNumber, flipX);
-            //мб сделать гг неу€звимым
         }
     }
 }

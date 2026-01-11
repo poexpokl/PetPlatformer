@@ -107,7 +107,7 @@ public class GhostStateMachine : EnemyStateMachine, IEdgeble
             case EnemyState.Attack:
                 eAnimation.AttackAnimation(false);
                 if (isNeedChangeOrientation && !isGotDamage)
-                    orientation.ChangeOrientation(edgeOrientaiton); //else isNeedChangeOrientation = false 
+                    orientation.ChangeOrientation(edgeOrientaiton);
                 break;
         }
     }

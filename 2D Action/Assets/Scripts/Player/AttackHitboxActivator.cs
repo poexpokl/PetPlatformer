@@ -5,8 +5,7 @@ public class AttackHitboxActivator : MonoBehaviour
 {
     [SerializeField] private GameObject[] hitboxes;
     [SerializeField] private float hitboxActiveTime;
-    public void ActivateHitbox(int numberOfHitbox) //0 - вправо, 1 - влево, 2 - вверх, 3 - вниз
-        //нейминг (тут же ещё деактивация)
+    public void ActivateHitbox(int numberOfHitbox)
     {
         hitboxes[numberOfHitbox].SetActive(true);
         StartCoroutine(DeactivateHitbox(numberOfHitbox));

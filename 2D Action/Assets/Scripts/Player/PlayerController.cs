@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,32 +16,32 @@ public class PlayerController : MonoBehaviour
     private bool canGroundDash = true;
     private bool canAirDash = true;
     public bool isStateRepeat { get; private set; }
-    private int playerOrientation = 1; //player?
-    private int dashType; //0 - по земле, 1 - по воздуху
-    private int healCounts = 0; // Нейинг
+    private int playerOrientation = 1;
+    private int dashType;
+    private int healCounts = 0;
     private bool canJumping = true;
     private bool canAttack = true;
     private bool isUncontrollable = false;
     private bool isInvulnerable = false;
     private bool isDashing = false;
     private bool isAttacking = false;
-    [SerializeField] private float uncontrollableTimeFromDamage = 0.1f; //мб нейминг
+    [SerializeField] private float uncontrollableTimeFromDamage = 0.1f;
     [SerializeField] private float invulnerableTimeFromDamage = 0.3f;
     [SerializeField] private float jumpingTime = 0.3f;
     [SerializeField] private float attackCooldown = 0.2f;
     [SerializeField] private float attackTime = 0.2f;
-    [SerializeField] private Vector2 botAirAttackForce = Vector2.up * 300; //нейминг
-    [SerializeField] private Vector2 attackForce = Vector2.right * 1000; //нейминг 1000
+    [SerializeField] private Vector2 botAirAttackForce = Vector2.up * 300;
+    [SerializeField] private Vector2 attackForce = Vector2.right * 1000;
     [SerializeField] private Vector2 getDamageForce;
     private float getDamageOrientation;
     private IInteractable interactable;
-    public float playerMoveInput { get; private set; } //нейминг?
+    public float playerMoveInput { get; private set; }
     private bool inInteractiveZone;
     private float jumpTimer = 0f;
     private float healTimer = 0f;
     [SerializeField] private float manaLoseTime;
     [SerializeField] private float deadTime = 2f;
-    private bool needToCancelEffects = false; // сменить имя
+    private bool needToCancelEffects = false;
     private bool isHealing;
     private bool isHitEnemy = false;
     private GroundCheck groundCheck;
@@ -158,16 +157,14 @@ public class PlayerController : MonoBehaviour
         isAttackPressed = false;//...
         isAirBotAttackPressed = false;
         isTopAttackPressed = false;
-
-        //Debug.Log(currentState);  
     }
 
     private void FixedUpdate()
-    {// мб придётся вынести в отдельный метод
+    {
         if (needToCancelEffects)
         {
             CanselEffects();
-            needToCancelEffects = false; //мб сменить название
+            needToCancelEffects = false;
         }
         if (currentState != PlayerState.Dash && currentState != PlayerState.Heal && !isUncontrollable)
             rb.linearVelocityX = moveAction.ReadValue<float>() * horizontalSpeed;
@@ -179,17 +176,14 @@ public class PlayerController : MonoBehaviour
                 rb.linearVelocityY = verticalSpeed;
                 break;
             case PlayerState.Fall:
-                //rb.linearVelocityY = -verticalSpeed;
-                //мб поставить макс скорость
                 break;
             case PlayerState.Dash:
                 rb.linearVelocityY = 0;
                 rb.linearVelocityX = dashSpeed * playerOrientation;
                 break;
-            //case "Heal": (linearVelocityX = 0)
             case PlayerState.GetDamage:
-                rb.linearVelocity = Vector2.zero; //Вот это сделать единоразовым
-                rb.AddForce(new Vector2(getDamageForce.x * getDamageOrientation, getDamageForce.y)); //мб это не один раз прокает?
+                rb.linearVelocity = Vector2.zero;
+                rb.AddForce(new Vector2(getDamageForce.x * getDamageOrientation, getDamageForce.y));
                 break;
             case PlayerState.Dead:
                 rb.linearVelocityX = 0;
@@ -201,7 +195,7 @@ public class PlayerController : MonoBehaviour
         jumpTimer = 0;
         canJumping = true;
     }
-    private void Run() //то же что Idle?
+    private void Run()
     {
         jumpTimer = 0;
         canJumping = true;
@@ -217,12 +211,12 @@ public class PlayerController : MonoBehaviour
 
     private void Fall()
     {
-        jumpTimer = 0;//?
+        jumpTimer = 0;
     }
 
     private void Dash(int dashType)
     {
-        canJumping = false; //?
+        canJumping = false;
 
 
         isDashing = true;
@@ -235,14 +229,10 @@ public class PlayerController : MonoBehaviour
 
     private void Dead()
     {
-        InputSystem.actions.FindActionMap("Player").Disable(); //Нужно отключить скрипт с получением инпутов
+        InputSystem.actions.FindActionMap("Player").Disable();
         isInvulnerable = true;
         StartCoroutine(ReloadScene());
         enabled = false;
-        //нужно отрубать скрипт со сменой state, но это когда я разделю их
-        //if(!GroundCheck()) rb.linearVelocityY...
-        //включить скрипт экрана смерти
-        //enabled = false;
     }
 
     IEnumerator ReloadScene()
@@ -257,7 +247,7 @@ public class PlayerController : MonoBehaviour
         interactable.DoInteraction();
     }
 
-    private bool CanInteract() //public??
+    private bool CanInteract()
     {
         if (inInteractiveZone && currentState == PlayerState.Idle)
             return true;
@@ -269,7 +259,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!isInvulnerable)
         {
-            resourcesManager.ChangeHp(-1);//изменить 1
+            resourcesManager.ChangeHp(-1);
             if (resourcesManager.hp == 0)
                 Dead();
             else
@@ -282,11 +272,11 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    public void GetDamage(Vector2 enemyPosition) //нужно число снятый хп в параметры
+    public void GetDamage(Vector2 enemyPosition)
     {
         if (!isInvulnerable)
         {
-            resourcesManager.ChangeHp(-1);//изменить 1
+            resourcesManager.ChangeHp(-1);
             if (resourcesManager.hp == 0)
                 Dead();
             else
@@ -295,8 +285,6 @@ public class PlayerController : MonoBehaviour
                     getDamageOrientation = -1;
                 else
                     getDamageOrientation = 1;
-                //тут как-то вычисляется как в связи с enemyPosition получается сила удара
-                //getDamageForce = ;
                 isUncontrollable = true;
                 StartCoroutine(EndUncontrollable());
                 isInvulnerable = true;
@@ -324,9 +312,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Attack(int attackType) //0 - вправо, 1 - влево, 2 - вверх, 3 - вниз
+    private void Attack(int attackType)
     {
-        canJumping = false; //?
+        canJumping = false;
 
         if (attackType == 0 && playerOrientation == -1)
             attackType = 1;
@@ -344,8 +332,8 @@ public class PlayerController : MonoBehaviour
         if (!isHitEnemy)
         {
             isHitEnemy = true;
-            Invoke("ChangeIsHitEnemy", 0.1f); //?
-            if (triggerType == PlayerTriggerType.Down)//весь этот kickbackForce сосал
+            Invoke("ChangeIsHitEnemy", 0.1f);
+            if (triggerType == PlayerTriggerType.Down)
             {
                 kickbackForce = botAirAttackForce;
                 rb.linearVelocityY = 0;
@@ -365,15 +353,15 @@ public class PlayerController : MonoBehaviour
         resourcesManager.ChangeMana(1);
     }
 
-    public void EnvironmentAttacked(PlayerTriggerType triggerType) // ?????????
+    public void EnvironmentAttacked(PlayerTriggerType triggerType)
     {
         Vector2 kickbackForce;
 
         if (!isHitEnemy)
         {
             isHitEnemy = true;
-            Invoke("ChangeIsHitEnemy", 0.1f); //?
-            if (triggerType == PlayerTriggerType.Down)//весь этот kickbackForce сосал
+            Invoke("ChangeIsHitEnemy", 0.1f);
+            if (triggerType == PlayerTriggerType.Down)
             {
                 kickbackForce = botAirAttackForce;
                 rb.linearVelocityY = 0;
@@ -396,7 +384,7 @@ public class PlayerController : MonoBehaviour
     {
         isHitEnemy = false;
     }
-    IEnumerator Dashing(int dashType) //имя
+    IEnumerator Dashing(int dashType)
     {
         yield return new WaitForSeconds(dashTime);
         isDashing = false;
@@ -407,7 +395,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator Attacking() //имя
+    IEnumerator Attacking()
     {
         yield return new WaitForSeconds(attackTime);
         isAttacking = false;
@@ -428,15 +416,14 @@ public class PlayerController : MonoBehaviour
     }
     private void ChangeState()
     {
-        //либо самыми первыми dead и getDamage и return, либо в конце. 
-        if (!isDashing && !isAttacking) //...    
+        if (!isDashing && !isAttacking) 
         {
             if (GroundCheck())
             {
-                canAirDash = true; //...
+                canAirDash = true;
                 if (CanInteract() && interactAction.IsPressed())
                     nextState = PlayerState.Interact;
-                else if (healAction.IsPressed() && (resourcesManager.CanUseMana(3) || isHealing)) // добавить условие
+                else if (healAction.IsPressed() && (resourcesManager.CanUseMana(3) || isHealing)) 
                     nextState = PlayerState.Heal;
                 else if (isTopAttackPressed && canAttack)
                     nextState = PlayerState.TopAttack;
@@ -476,18 +463,15 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-        //Debug.Log(currentState);
 
-
-
-        if (isUncontrollable) //isUncontrollable??
+        if (isUncontrollable) 
             nextState = PlayerState.GetDamage;
         if (currentState != nextState)
         {
             isStateRepeat = false;
             previousState = currentState;
             currentState = nextState;
-            if (previousState == PlayerState.Jump) // && currentState != PlayerState.Jump
+            if (previousState == PlayerState.Jump) 
                 needToCancelEffects = true;
             else if (previousState == PlayerState.Heal)
             {
@@ -526,7 +510,7 @@ public class PlayerController : MonoBehaviour
                     Attack(0);
                     break;
                 case PlayerState.AirBotAttack:
-                    Attack(3); //5? + физика не в FixedUpdate
+                    Attack(3);
                     break;
                 case PlayerState.AirTopAttack:
                     Attack(2);
@@ -534,9 +518,9 @@ public class PlayerController : MonoBehaviour
                 case PlayerState.Heal:
                     Heal();
                     break;
-                case PlayerState.GetDamage: //надо оно?
+                case PlayerState.GetDamage:
                     break;
-                case PlayerState.Interact: //??
+                case PlayerState.Interact:
                     Interact();
                     break;
             }
@@ -544,26 +528,24 @@ public class PlayerController : MonoBehaviour
         else
         {
             isStateRepeat = true;
-            if (currentState == PlayerState.Jump) //Это тоже что-то не то
+            if (currentState == PlayerState.Jump)
                 Jump();
             else if (currentState == PlayerState.Heal)
                 Heal();
         }
-        //мб это не очень хорошо
     }
     private bool GroundCheck()
     {
         return groundCheck.Check();
-        //return transform.position.y < 0; //исправить 
     }
-    private void CanselEffects() //мб сменить название
+    private void CanselEffects()
     {
-        rb.linearVelocityY = 0; //менять эффекты в зависимости от currentState
+        rb.linearVelocityY = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Interactable")) //??
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Interactable"))
         {
             interactable = collision.GetComponent<IInteractable>();
             inInteractiveZone = true;

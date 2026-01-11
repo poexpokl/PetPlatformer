@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem.LowLevel;
 
 public class WizardShooterStateMachine : EnemyStateMachine, IEdgeble
 {
@@ -63,7 +62,7 @@ public class WizardShooterStateMachine : EnemyStateMachine, IEdgeble
                 movement.SetZeroSpeed();
                 eAnimation.DeadAnimation();
                 GetComponentInChildren<EnemyTrigger>().gameObject.SetActive(false);
-                gameObject.tag = "Untagged"; //
+                gameObject.tag = "Untagged";
                 GetComponent<DestroyAtfter>().DestroyObject();
                 enabled = false;
                 break;
