@@ -154,7 +154,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         ChangeState();
-        isAttackPressed = false;//...
+        isAttackPressed = false;
         isAirBotAttackPressed = false;
         isTopAttackPressed = false;
     }
